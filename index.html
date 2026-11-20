@@ -5,12 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <style>
-            html,body{
+            html,
+            body {
                 width: 100%;
                 height: 100%;
             }
 
-            *{
+            * {
                 box-sizing: border-box;
                 margin: 0px;
                 padding: 0px;
@@ -37,6 +38,7 @@
                 outline: none;
                 padding: 2rem 3rem;
                 border-radius: 3rem 0px 0px 3rem;
+                font-size: 1rem;
             }
 
             .inputs > button {
@@ -48,7 +50,6 @@
                 font-size: 2rem;
                 cursor: pointer;
             }
-
         </style>
     </head>
     <body>
@@ -78,5 +79,21 @@
                 </button>
             </div>
         </div>
+        <script>
+            const input = document.querySelector("#input");
+            const button = document.querySelector("#toggle");
+
+            button.onclick = ()=>{
+                if(input.type == "password"){
+                    input.type = "text";
+                    return;
+                }
+                if(input.type == "text"){
+                    input.type = "password";
+                    return;
+                }
+            }
+
+        </script>
     </body>
 </html>
